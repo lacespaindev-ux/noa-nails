@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Noa Nails · Manicura y pedicura en Gijón</title>
+<meta name="description" content="Noa Nails, salón de manicura y pedicura en Gijón (C. Cabrales, 136). Semipermanente, uñas acrílicas, pedicura spa, depilación, cejas y presoterapia. 5,0 en Google con más de 100 reseñas.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c98b8b'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='34' text-anchor='middle' fill='%23fff8f4'%3EN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf5f1;--blush:#f3e1dc;--rose:#c98b8b;--rose-d:#a96c6e;--ink:#3b2a2a;--soft:#7d6764;--line:#ead6cf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',system-ui,sans-serif;font-weight:300;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;line-height:1.1}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+header.scrolled{background:rgba(251,245,241,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:600;text-decoration:none;letter-spacing:.5px}
+.logo span{color:var(--rose)}
+.links{display:flex;gap:28px;list-style:none;font-size:14px;letter-spacing:1px;text-transform:uppercase}
+.links a{text-decoration:none}
+.links a:hover{color:var(--rose-d)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger span{position:absolute;left:10px;right:10px;height:2px;background:var(--ink);transition:.3s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
+.burger.open span:nth-child(1){top:21px;transform:rotate(45deg)}.burger.open span:nth-child(2){opacity:0}.burger.open span:nth-child(3){top:21px;transform:rotate(-45deg)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--rose);color:#fff;text-decoration:none;padding:15px 28px;border-radius:40px;font-size:15px;font-weight:400;letter-spacing:.5px;transition:background .25s,transform .25s}
+.btn:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:#fff}
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:50px;padding:110px 0 60px}
+.eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--rose-d);margin-bottom:18px}
+.hero h1{font-size:clamp(46px,7vw,86px)}
+.hero h1 em{color:var(--rose)}
+.hero p.lead{font-size:19px;color:var(--soft);margin:22px 0 32px;max-width:470px}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.stars{display:flex;align-items:center;gap:12px;margin-top:34px;font-size:15px;color:var(--soft)}
+.stars b{font-family:'Cormorant Garamond',serif;font-size:34px;color:var(--ink);font-weight:600}
+.stars .st{color:#d9a441;letter-spacing:2px;font-size:18px}
+.hero-img{position:relative;aspect-ratio:3/4;border-radius:220px 220px 22px 22px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(120,60,60,.45)}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;bottom:24px;left:-24px;background:#fff;padding:14px 20px;border-radius:16px;box-shadow:0 12px 30px -12px rgba(0,0,0,.25);font-size:14px}
+.badge strong{display:block;font-family:'Cormorant Garamond',serif;font-size:22px}
+section{padding:100px 0}
+.head{text-align:center;max-width:620px;margin:0 auto 54px}
+.head h2{font-size:clamp(38px,5vw,56px)}
+.head p{color:var(--soft);margin-top:14px;font-size:17px}
+/* services */
+.services{background:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:22px;padding:34px 28px;background:var(--cream);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -26px rgba(120,60,60,.5)}
+.ico{width:52px;height:52px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-size:24px;margin-bottom:20px}
+.card h3{font-size:28px;margin-bottom:10px}
+.card p{color:var(--soft);font-size:15.5px}
+.note{text-align:center;margin-top:34px;color:var(--soft);font-size:15px}
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:14px}
+.gallery figure{overflow:hidden;border-radius:18px;cursor:zoom-in}
+.gallery figure:nth-child(1){grid-row:span 2;grid-column:span 2}
+.gallery figure:nth-child(4){grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.gallery figure:hover img{transform:scale(1.06)}
+.lightbox{position:fixed;inset:0;background:rgba(40,25,25,.9);display:none;align-items:center;justify-content:center;z-index:100;padding:30px}
+.lightbox.on{display:flex}
+.lightbox img{max-height:88vh;border-radius:14px}
+/* reviews */
+.reviews{background:var(--blush)}
+.rv-wrap{max-width:760px;margin:0 auto;text-align:center;position:relative}
+.rv{display:none;animation:fade .6s}
+.rv.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.rv blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(25px,3.4vw,34px);font-style:italic;line-height:1.35}
+.rv cite{display:block;margin-top:22px;font-style:normal;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--rose-d)}
+.dots{display:flex;justify-content:center;gap:10px;margin-top:34px}
+.dots button{width:10px;height:10px;border-radius:50%;border:0;background:#dcbcb5;cursor:pointer}
+.dots button.on{background:var(--rose-d);width:28px;border-radius:6px}
+.g-sum{display:flex;justify-content:center;align-items:center;gap:10px;margin-bottom:34px;font-size:15px;color:var(--soft)}
+/* info */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+.box{background:#fff;border-radius:22px;padding:40px;border:1px solid var(--line)}
+.box h3{font-size:32px;margin-bottom:22px}
+.hours{list-style:none}
+.hours li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed var(--line)}
+.hours li.today{color:var(--rose-d);font-weight:500}
+.map{border-radius:22px;overflow:hidden;min-height:360px;border:1px solid var(--line)}
+.map iframe{width:100%;height:100%;min-height:360px;border:0}
+.contact-line{margin-top:22px;color:var(--soft)}
+.contact-line a{color:var(--ink)}
+/* cta */
+.cta{background:var(--ink);color:var(--cream);text-align:center}
+.cta h2{font-size:clamp(40px,6vw,64px)}
+.cta p{opacity:.8;margin:16px auto 34px;max-width:480px}
+footer{background:var(--ink);color:#c9b8b4;text-align:center;padding:26px;font-size:13px;border-top:1px solid #4d3a3a}
+.wa-float{position:fixed;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 25px -8px rgba(0,0,0,.4);z-index:60}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@media (max-width:860px){
+ .links{position:fixed;top:70px;left:0;right:0;flex-direction:column;gap:0;background:var(--cream);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:max-height .35s}
+ .links.open{max-height:360px}
+ .links li a{display:block;padding:16px 22px;border-top:1px solid var(--line)}
+ .burger{display:block}
+ header{background:rgba(251,245,241,.94);backdrop-filter:blur(8px)}
+ .hero{grid-template-columns:1fr;padding-top:100px;text-align:center}
+ .hero p.lead{margin-left:auto;margin-right:auto}
+ .actions,.stars{justify-content:center}
+ .hero-img{max-width:380px;margin:0 auto}
+ .badge{left:12px}
+ .grid{grid-template-columns:1fr}
+ .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+ .info{grid-template-columns:1fr}
+ section{padding:72px 0}
+}
+</style>
+</head>
+<body>
+<header id="top">
+ <div class="wrap nav">
+  <a href="#inicio" class="logo">Noa <span>Nails</span></a>
+  <ul class="links" id="links">
+   <li><a href="#servicios">Servicios</a></li>
+   <li><a href="#trabajos">Trabajos</a></li>
+   <li><a href="#opiniones">Opiniones</a></li>
+   <li><a href="#visitanos">Visítanos</a></li>
+  </ul>
+  <button class="burger" id="burger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<main>
+<div class="wrap hero" id="inicio">
+ <div>
+  <p class="eyebrow">Manicura · Pedicura · Estética · Gijón</p>
+  <h1>Tus manos, <em>en las mejores</em> manos</h1>
+  <p class="lead">Semipermanente que dura de verdad, uñas acrílicas, pedicura spa y diseños originales en un salón tranquilo de la calle Cabrales, donde te tratan como en casa.</p>
+  <div class="actions">
+   <a class="btn" href="https://wa.me/34684649543?text=Hola%20Noa%20Nails%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+   <a class="btn ghost" href="#servicios">Ver servicios</a>
+  </div>
+  <div class="stars"><b>5,0</b><div><div class="st">★★★★★</div>Más de 100 reseñas en Google</div></div>
+ </div>
+ <div class="hero-img">
+  <img src="https://lh3.googleusercontent.com/grass-cs/AABkmLfQWLJngFniWZcQxAs20aYzNo87hdDRHeqUvPGv3nw1Pr3tolD4EUWfVstq09RARMPCWABgBYdOWK65xP5bduQSMG-5V-9sYcdOQcflknO9TByPXyzN617UBIcrMyDgt0VrpYoFlA=w900-k-no" alt="Uñas hechas en Noa Nails">
+  <div class="badge"><strong>C. Cabrales, 136</strong>Gijón · Lunes a sábado</div>
+ </div>
+</div>
+
+<section class="services" id="servicios">
+ <div class="wrap">
+  <div class="head"><p class="eyebrow">Servicios</p><h2>Todo lo que necesitas, en un solo sitio</h2><p>Cuéntanos qué te apetece y te aconsejamos el tratamiento que mejor va contigo.</p></div>
+  <div class="grid">
+   <div class="card"><div class="ico">💅</div><h3>Manicura semipermanente</h3><p>Color impecable durante semanas, sin desconchones. Liso, francesa, baby boomer o con diseño.</p></div>
+   <div class="card"><div class="ico">✨</div><h3>Uñas acrílicas y gel</h3><p>Construcción, relleno y retirada cuidadosa. Largo y forma a tu gusto, siempre iguales.</p></div>
+   <div class="card"><div class="ico">🌸</div><h3>Nail art</h3><p>Diseños originales, degradados y detalles a mano para bodas, eventos o porque sí.</p></div>
+   <div class="card"><div class="ico">🦶</div><h3>Pedicura spa</h3><p>Limpieza, cuidado de durezas, masaje de pies y esmaltado normal o semipermanente.</p></div>
+   <div class="card"><div class="ico">🌿</div><h3>Depilación y cejas</h3><p>Diseño y depilación de cejas y depilación facial y corporal con un acabado limpio.</p></div>
+   <div class="card"><div class="ico">💆‍♀️</div><h3>Presoterapia</h3><p>Sesiones y bonos para piernas ligeras y mejor circulación. Pregúntanos por los bonos.</p></div>
+  </div>
+  <p class="note">¿Precios? Escríbenos por WhatsApp y te los pasamos al momento.</p>
+ </div>
+</section>
+
+<section id="trabajos">
+ <div class="wrap">
+  <div class="head"><p class="eyebrow">Trabajos</p><h2>Algunos de nuestros diseños</h2><p>Toca una foto para verla en grande.</p></div>
+  <div class="gallery" id="gallery">
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLcDDWSA6cEpLJSzY8GDlToPcbxCnKwOP3bmgwp5eKk21z5YJITolNralErvRS58Kclh29ewRHw6rfdLJ3UnIpMbZXM-nOAgva92WmENaZKq6TUTAIAQNdW3lvT3wrQbzt_2miT-Lg=w900-k-no" alt="Diseño de uñas"></figure>
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLfF5pFBbv4OEErK76r-NU0Ntp1VWsjrek0bacnlpD7sYB6taLBl1be8qcHqFVA-EzUXef6tCOHNY_yAAhh_F_BR4zE8Gk5OxAHD7_F4khntJTINHy-Y1Gd2f0kumLE8QjNpQWjXmfldHYU=w700-k-no" alt="Manicura"></figure>
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLfbbpa_7Q_W_iOW_EYL-7Q_1iBbnJmRnLxcruWWhkCyTdarv75oPU_L6szjwMWIepQS5zGY-D7WwcuvW2332RbHIHh0NOsKiXiJ6V9NKjgIMeJlKnRApK6zN23ubxq6WkpvRPMM=w700-k-no" alt="Uñas semipermanente"></figure>
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QLAe489Fm1PPvCh3CZnHrVWtmLvFHuvBn7WWiNCovjWxYLgq6wZP2sTrdX3_r5xbdpQF0uGWMXXXReTfz9i50A0FGIkQYU9hsGnRK9kyLl9rJt6xCXdHIdRdTY1wZTKDvvd-fcsA=w700-k-no" alt="Nail art"></figure>
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLd-aOCAjJDflE5RLwehR1cF2VkGCgKrMr8Qz8NF631SX8O0_oqK6KBvioVHVaeGQJgYx5xeSkwZci2NvxRQrs6sTls-gJcQD66cd3FsQ8KvqKQghMTNtbCtdvsoK4oXZN6L8vA=w700-k-no" alt="Uñas decoradas"></figure>
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/grass-cs/AABkmLcLuiI-Hs5mN3z0GJlYdGL-mG9RtDtUm_y4K8biHcx_Mnx6uxuS_1rfLC6iKXysO15DTfePrLA2vvB6qLNdgMRFTZxUOsrc5sOCspY1amz_srLqeWQaerTR25AuRio2MWK1u2o=w700-k-no" alt="Pedicura"></figure>
+   <figure><img loading="lazy" src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SLfuExqnrpHoCrEexqpD63UyGHC9ZWxbBDLsRxVbUWLoA_fyPyVhysMWVyUUIOKhcZUwmCs7OfzT1MdQMARg9Y3YYyWPZcreckNI-_aAeSUK5G2jpAbvMGG1SCJbFKIjav_enbUoQK_8I=w700-k-no" alt="Manicura con diseño"></figure>
+  </div>
+ </div>
+</section>
+
+<section class="reviews" id="opiniones">
+ <div class="wrap">
+  <div class="head"><p class="eyebrow">Opiniones</p><h2>Lo que dicen nuestras clientas</h2></div>
+  <div class="g-sum"><span style="color:#d9a441;font-size:20px">★★★★★</span> 5,0 · más de 100 reseñas en Google</div>
+  <div class="rv-wrap" id="rv">
+   <div class="rv on"><blockquote>“He ido por primera vez y he quedado encantada. Muy buena atención, súper agradables y profesionales. ¡Sin duda, repetiré!”</blockquote><cite>Inmaculada · Google</cite></div>
+   <div class="rv"><blockquote>“Empecé con manicura semipermanente y pedicura spa. Sitio muy agradable con chicas profesionales.”</blockquote><cite>María · Google</cite></div>
+   <div class="rv"><blockquote>“La encontré buscando un sitio para hacerme las uñas para una boda y desde entonces no he dejado de ir. Muy duradera y con ideas muy originales.”</blockquote><cite>Alejandra · Google</cite></div>
+   <div class="rv"><blockquote>“Me ha dejado las cejas estupendas después de una mala experiencia en otro sitio.”</blockquote><cite>Clienta · Google</cite></div>
+   <div class="rv"><blockquote>“Profesionalidad y atención inmejorables.”</blockquote><cite>Clienta · Google</cite></div>
+  </div>
+  <div class="dots" id="dots"></div>
+ </div>
+</section>
+
+<section id="visitanos">
+ <div class="wrap info">
+  <div class="box">
+   <h3>Horario</h3>
+   <ul class="hours" id="hours">
+    <li data-d="1"><span>Lunes</span><span>9:00 – 19:00</span></li>
+    <li data-d="2"><span>Martes</span><span>9:00 – 19:00</span></li>
+    <li data-d="3"><span>Miércoles</span><span>9:00 – 19:00</span></li>
+    <li data-d="4"><span>Jueves</span><span>9:00 – 19:00</span></li>
+    <li data-d="5"><span>Viernes</span><span>9:00 – 19:00</span></li>
+    <li data-d="6"><span>Sábado</span><span>10:00 – 14:00</span></li>
+    <li data-d="0"><span>Domingo</span><span>Cerrado</span></li>
+   </ul>
+   <p class="contact-line">📍 C. Cabrales, 136 · 33205 Gijón<br>📞 <a href="tel:+34684649543">684 64 95 43</a></p>
+  </div>
+  <div class="map"><iframe loading="lazy" title="Mapa Noa Nails" src="https://www.google.com/maps?q=Noa%20nails%20Calle%20Cabrales%20136%20Gij%C3%B3n&output=embed"></iframe></div>
+ </div>
+</section>
+
+<section class="cta">
+ <div class="wrap">
+  <h2>¿Te hacemos un hueco?</h2>
+  <p>Escríbenos por WhatsApp con el día que te viene bien y te confirmamos la cita en un momento.</p>
+  <a class="btn" href="https://wa.me/34684649543?text=Hola%20Noa%20Nails%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener">Pedir cita por WhatsApp</a>
+ </div>
+</section>
+</main>
+
+<footer>© Noa Nails · Manicura y pedicura en Gijón</footer>
+
+<a class="wa-float" href="https://wa.me/34684649543?text=Hola%20Noa%20Nails%2C%20me%20gustar%C3%ADa%20pedir%20cita" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.7 10.7 0 0 1-5.5-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.2-.3-.3-.6-.4z"/></svg></a>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script>
+const header=document.getElementById('top'),burger=document.getElementById('burger'),links=document.getElementById('links');
+addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20));
+burger.onclick=()=>{burger.classList.toggle('open');links.classList.toggle('open')};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{burger.classList.remove('open');links.classList.remove('open')});
+// reseñas
+const rvs=[...document.querySelectorAll('.rv')],dots=document.getElementById('dots');let cur=0,timer;
+rvs.forEach((_,i)=>{const b=document.createElement('button');b.ariaLabel='Opinión '+(i+1);b.onclick=()=>{show(i);reset()};dots.appendChild(b)});
+function show(i){rvs[cur].classList.remove('on');dots.children[cur].classList.remove('on');cur=i;rvs[cur].classList.add('on');dots.children[cur].classList.add('on')}
+function reset(){clearInterval(timer);timer=setInterval(()=>show((cur+1)%rvs.length),6000)}
+show(0);reset();
+// horario de hoy
+const d=new Date().getDay();document.querySelector('#hours li[data-d="'+d+'"]')?.classList.add('today');
+// galería
+const lb=document.getElementById('lb');
+document.querySelectorAll('#gallery img').forEach(img=>img.onclick=()=>{lb.querySelector('img').src=img.src.replace(/=w\d+-k-no/,'=w1400-k-no');lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+</script>
+</body>
+</html>
